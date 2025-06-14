@@ -2,7 +2,7 @@
 FROM eclipse-temurin:17-jdk-jammy AS build
 WORKDIR /app
 COPY . .
-# If you use Maven Wrapper, replace 'mvn' with './mvnw'
+RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # ---- Run Stage ----
